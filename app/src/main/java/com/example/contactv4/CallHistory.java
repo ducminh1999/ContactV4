@@ -43,11 +43,7 @@ public class CallHistory extends AppCompatActivity {
         Bundle bundle = intent.getBundleExtra("package");
         arrayList = (ArrayList<Contact>) bundle.getSerializable("contact");
         customAdapter = new CustomAdapter(this, R.layout.row_call_history, arrayList);
-        for(int i=0;i<arrayList.size();i++){
-            lvCallHistory.setAdapter(customAdapter);
-            lvCallHistory.deferNotifyDataSetChanged();
-            lvCallHistory.setTextFilterEnabled(true);
-        }
+
         lvCallHistory.setAdapter(customAdapter);
         lvCallHistory.deferNotifyDataSetChanged();
         lvCallHistory.setTextFilterEnabled(true);
